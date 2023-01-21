@@ -1,0 +1,44 @@
+.projects-list {
+
+  .project-container {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 60px;
+
+    .project-info {
+      color: white;
+      flex: 5;
+
+      h1 {
+        color: #ffffff;
+      }
+
+      .button-links {
+
+        .buttons-icons {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          div {
+            display: grid;
+            grid-auto-flow: column;
+            grid-gap: 10px;
+            align-items: center;
+
+          }
+        }
+      }
+    }
+
+    .project-image-wrapper {
+      flex: 7;
+
+      .project-image {
+        object-fit: contain;
+      }
+    }
+  }
+}
