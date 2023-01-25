@@ -1,7 +1,7 @@
 {
   "background": {
     "color": {
-      "value": "#47414e"
+      "value": "#4f4a7f"
     }
   },
   "fpsLimit": 60,
@@ -58,7 +58,7 @@
     },
     "size": {
       "random": true,
-      "value": 1
+      "value": 3
     }
   },
   "detectRetina": true

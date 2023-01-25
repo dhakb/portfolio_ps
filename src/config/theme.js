@@ -22,8 +22,9 @@ const colors = {
     yellow: '#FFB700',
     purple: '#8242F6',
     purple_dark: '#231c42',
-    background_light: '#5e31dc',
-    background_dark: '#1e243a',
+    background_light: 'rgb(53,53,77)',
+    background_dark: '#272a48',
+
 }
 
 const theme = {

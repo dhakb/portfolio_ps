@@ -31,7 +31,7 @@ const globalStyles = css`
   b {
     font-family: ${fonts.semibold};
     em {
-      font-family: ${fonts.semiboldItalic};
+       font-family: ${fonts.semiboldItalic};
     }
   }
   input,

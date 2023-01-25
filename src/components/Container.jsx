@@ -3,7 +3,7 @@
 import { jsx } from '@emotion/react'
 import React from 'react';
 import {css} from "@emotion/react";
-import {bpMaxSM} from "../lib/breakpoints";
+import {bpMaxSM, bpMaxMD} from "../lib/breakpoints";
 
 const Container = (props) => {
     const {
@@ -26,7 +26,11 @@ const Container = (props) => {
 
               ${bpMaxSM} {
                 padding: ${noVerticalPadding ? 0 : '20'}px ${noHorizontalPadding ? 0 : '20'}px;
+                width: 80%;
               }
+              
+          
+              
             `}
             {...restProps}
         >

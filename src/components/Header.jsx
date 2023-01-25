@@ -71,7 +71,7 @@ function Header({
     return (
         <header
             css={css`
-              z-index: 10;
+              z-index: 100;
               position: fixed;
               top: 0;
               width: 100%;
@@ -91,6 +91,7 @@ function Header({
                         display: 'flex',
                         justifyContent: 'space-between',
                         alignItems: 'center',
+                        // zIndex: '10',
                     }}
                 >
                     <HeaderLink
@@ -99,7 +100,7 @@ function Header({
                         headerColor={headerColor}
                         css={{
                             position: 'relative',
-                            fontFamily: fonts.regular,
+                            fontFamily: `${fonts.regular}`,
                             display: 'flex',
                             alignItems: 'center',
                             img: {
@@ -115,14 +116,14 @@ function Header({
                             },
                         }}
                     >
-                        <span>{siteTitle}</span>
                     </HeaderLink>
                     <div
                         css={css`
-                          font-size: 16px;
+                          font-size: 18px;
                           line-height: 1.25;
                           display: flex;
                           align-items: center;
+                         
 
                           .mobile-nav {
                             display: none;
@@ -138,17 +139,10 @@ function Header({
                         <MobileNav color={headerColor}/>
                         <NavLink
                             headerColor={headerColor}
-                            to="/#major-projects"
-                            aria-label="View major projects section"
-                        >
-                            Major projects
-                        </NavLink>
-                        <NavLink
-                            headerColor={headerColor}
                             to="/#all-projects"
                             aria-label="View all projects section"
                         >
-                            All projects
+                            Projects
                         </NavLink>
                         <NavLink
                             headerColor={headerColor}

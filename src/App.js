@@ -46,6 +46,7 @@ function App() {
               padding: 40px 80px 60px 80px;
               margin-bottom: 40px;
               box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+              z-index: 10;
 
               ${bpMaxSM} {
                 padding: 40px;

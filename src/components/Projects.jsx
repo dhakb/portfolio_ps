@@ -59,6 +59,34 @@ const projectContainerStyles = css`
   }
 `
 
+const sourceLinkStyles = css`
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #b5aae1 !important;
+  font-family: Caveat, cursive;;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+`
+
+const arrowRight = <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="6"
+    height="9"
+    viewBox="0 0 6 9"
+>
+    <polyline
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        points="57 18 60.5 21.5 57 25"
+        transform="translate(-56 -17)"
+    />
+</svg>
+
 const Button = styled.a({
     cursor: 'pointer',
     padding: '6px 12px',
@@ -76,6 +104,7 @@ const Button = styled.a({
     },
 })
 
+const PB = ""
 
 const Projects = () => {
     return (
@@ -85,44 +114,23 @@ const Projects = () => {
                 <div className="project-container">
                     <div className="project-info">
                         <h1>Radish Garden</h1>
-                        <p>this this and thisasdak sdjnajhsbdjhabs dkjabnshjdbasj hbdjhasbdhj adjbhashjdba shjdbh
-                            asdasda
-                            asda jasbd</p>
-                        <p>this this and thisasd dasdasd asdasdkjbasjdnk asjbdnjk asnbdjhasbjdhba shjdbjahsbdjhasb</p>
-                        <p>this this and this</p>
+                        <p> Social networking platform for plants on digital garden. </p>
+                        <p> The frontend of the application is written in React whereas backend is built with ExpressJS
+                            in NodeJS. Express server provides RESTful services that is built with MVC architectural
+                            pattern.</p>
+                        <p> For user session recordings and sending/receiving instant
+                            messages uses socket.io. For file uploading uses single API call and stores data in GridFs
+                            storage.</p>
 
                         <div className="button-links">
                             <a
-                                css={css`
-                                  display: block;
-                                  margin-bottom: 10px;
-                                  font-size: 16px;
-                                  color: #b5aae1 !important;
-
-                                  &:hover {
-                                    cursor: pointer;
-                                    text-decoration: underline;
-                                  }
-                                `}
+                                css={sourceLinkStyles}
                                 href="https://github.com/giga-mania/redish_garden_media_corp."
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 Source code{' '}
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="6"
-                                    height="9"
-                                    viewBox="0 0 6 9"
-                                >
-                                    <polyline
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        points="57 18 60.5 21.5 57 25"
-                                        transform="translate(-56 -17)"
-                                    />
-                                </svg>
+                                {arrowRight}
                             </a>
                             <div className="buttons-icons">
                                 <Button href="https://client-zk8et.ondigitalocean.app/login" target="_blank"
@@ -140,7 +148,7 @@ const Projects = () => {
                     </div>
                     <div className="project-image-wrapper">
                         <Tilt options={tiltOptions}>
-                            <img src="http://localhost:3000/assets/radish_garden.png" alt="" className="project-image"/>
+                            <img src={`${PB}/assets/radish_garden.png`} alt="" className="project-image"/>
                         </Tilt>
                     </div>
                 </div>
@@ -150,44 +158,22 @@ const Projects = () => {
                 <div className="project-container">
                     <div className="project-info">
                         <h1>Demo Shop</h1>
-                        <p>this this and thisasdak sdjnajhsbdjhabs dkjabnshjdbasj hbdjhasbdhj adjbhashjdba shjdbh
-                            asdasda
-                            asda jasbd</p>
-                        <p>this this and thisasd dasdasd asdasdkjbasjdnk asjbdnjk asnbdjhasbjdhba shjdbjahsbdjhasb</p>
-                        <p>this this and this</p>
+                        <p>E-commerce React Application built with class components. The
+                            application retrieves data from GraphQL based server. For state management uses Redux
+                            alongside with RTK Query for data fetching.</p>
+                        <p>The application was built as an assessment project for Scadiweb. UI was created from Figma
+                            desgin.</p>
+
 
                         <div className="button-links">
                             <a
-                                css={css`
-                                  display: block;
-                                  margin-bottom: 10px;
-                                  font-size: 16px;
-                                  color: #b5aae1 !important;
-
-                                  &:hover {
-                                    cursor: pointer;
-                                    text-decoration: underline;
-                                  }
-                                `}
+                                css={sourceLinkStyles}
                                 href="https://github.com/giga-mania/demo-shop"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 Source code{' '}
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="6"
-                                    height="9"
-                                    viewBox="0 0 6 9"
-                                >
-                                    <polyline
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        points="57 18 60.5 21.5 57 25"
-                                        transform="translate(-56 -17)"
-                                    />
-                                </svg>
+                                {arrowRight}
                             </a>
                             <div className="buttons-icons">
                                 <Button href="https://demo-shop-storefront.netlify.app/" target="_blank"
@@ -204,7 +190,7 @@ const Projects = () => {
                     </div>
                     <div className="project-image-wrapper">
                         <Tilt options={tiltOptions}>
-                            <img src="http://localhost:3000/assets/demo_shop.png" alt="" className="project-image"/>
+                            <img src={`${PB}/assets/demo_shop.png`} alt="" className="project-image"/>
                         </Tilt>
                     </div>
                 </div>
@@ -215,44 +201,21 @@ const Projects = () => {
                     <div className="project-info">
                         <h1>Roomer Chat</h1>
 
-                        <p>this this and thisasdak sdjnajhsbdjhabs dkjabnshjdbasj hbdjhasbdhj adjbhashjdba shjdbh
-                            asdasda
-                            asda jasbd</p>
-                        <p>this this and thisasd dasdasd asdasdkjbasjdnk asjbdnjk asnbdjhasbjdhba shjdbjahsbdjhasb</p>
-                        <p>this this and this</p>
+                        <p>Roomer Chat is a socket based secret chatting application. This app lets you create rooms and
+                            chat with friend safely.</p>
+                        <p>UI is built with React and MaterialUI. </p>
+                        <p>A low-overhead instant communication channel between the server and the client is designed
+                            using socket.io.</p>
 
                         <div className="button-links">
                             <a
-                                css={css`
-                                  display: block;
-                                  margin-bottom: 10px;
-                                  font-size: 16px;
-                                  color: #b5aae1 !important;
-
-                                  &:hover {
-                                    cursor: pointer;
-                                    text-decoration: underline;
-                                  }
-                                `}
+                                css={sourceLinkStyles}
                                 href="https://github.com/giga-mania/roomer-hackchat"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 Source code{' '}
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="6"
-                                    height="9"
-                                    viewBox="0 0 6 9"
-                                >
-                                    <polyline
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        points="57 18 60.5 21.5 57 25"
-                                        transform="translate(-56 -17)"
-                                    />
-                                </svg>
+                                {arrowRight}
                             </a>
                             <div className="buttons-icons">
                                 <Button href="https://roomer-chat-8xhzn.ondigitalocean.app/" target="_blank"
@@ -261,6 +224,7 @@ const Projects = () => {
                                     <ReactIcon style={{width: "30px", height: "30px"}}/>
                                     <MaterialUI style={{width: "30px", height: "30px"}}/>
                                     <Sass style={{width: "30px", height: "30px"}}/>
+                                    <NodeJs style={{width: "25px", height: "25px"}}/>
                                     <SocketIO style={{width: "25px", height: "25px"}}/>
                                 </div>
                             </div>
@@ -268,7 +232,7 @@ const Projects = () => {
                     </div>
                     <div className="project-image-wrapper">
                         <Tilt options={tiltOptions}>
-                            <img src="http://localhost:3000/assets/roomer_dark.png" alt="" className="project-image"/>
+                            <img src={`${PB}/assets/roomer_dark.png`} alt="" className="project-image"/>
                         </Tilt>
                     </div>
                 </div>
@@ -279,44 +243,21 @@ const Projects = () => {
                 <div className="project-container">
                     <div className="project-info">
                         <h1>Sound Store</h1>
-                        <p>this this and thisasdak sdjnajhsbdjhabs dkjabnshjdbasj hbdjhasbdhj adjbhashjdba shjdbh
-                            asdasda
-                            asda jasbd</p>
-                        <p>this this and thisasd dasdasd asdasdkjbasjdnk asjbdnjk asnbdjhasbjdhba shjdbjahsbdjhasb</p>
-                        <p>this this and this</p>
+                        <p>The Sound Store is an E-commerce React application built with functional components.
+                            The application for state management uses React context API. For authentication and
+                            database management uses Firebase services.</p>
+                        <p></p>
+                        <p></p>
 
                         <div className="button-links">
                             <a
-                                css={css`
-                                  display: block;
-                                  margin-bottom: 10px;
-                                  font-size: 16px;
-                                  color: #b5aae1 !important;
-
-                                  &:hover {
-                                    cursor: pointer;
-                                    text-decoration: underline;
-                                  }
-                                `}
+                                css={sourceLinkStyles}
                                 href="https://github.com/giga-mania/sound_store"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
                                 Source code{' '}
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="6"
-                                    height="9"
-                                    viewBox="0 0 6 9"
-                                >
-                                    <polyline
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        points="57 18 60.5 21.5 57 25"
-                                        transform="translate(-56 -17)"
-                                    />
-                                </svg>
+                                {arrowRight}
                             </a>
                             <div className="buttons-icons">
                                 <Button href="https://sound-store.netlify.app/" target="_blank"
@@ -333,7 +274,7 @@ const Projects = () => {
                     </div>
                     <div className="project-image-wrapper">
                         <Tilt options={tiltOptions}>
-                            <img src="http://localhost:3000/assets/sound_store_a.png" alt="" className="project-image"/>
+                            <img src={`${PB}/assets/sound_store.png`} alt="" className="project-image"/>
                         </Tilt>
                     </div>
                 </div>
@@ -342,9 +283,6 @@ const Projects = () => {
         </div>
     );
 };
-
-
-
 
 
 export default Projects;

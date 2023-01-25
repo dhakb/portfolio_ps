@@ -1,25 +1,20 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from '@emotion/react'
-import * as React from 'react'
 import * as Yup from 'yup'
-import styled from '@emotion/styled'
+import * as React from 'react'
 import theme from "../config/theme";
-import Message from "./Message";
-import {MessageSentIllustration} from '../ilustrations/message-sent'
-import {css} from '@emotion/react'
-import {ErrorMessage, Field, Form, Formik} from 'formik'
+import styled from '@emotion/styled'
 import {rhythm} from "../lib/typography";
+import { css, jsx } from '@emotion/react'
 import {bpMaxSM} from '../lib/breakpoints'
+import {ErrorMessage, Field, Form, Formik} from 'formik'
+import {MessageSentIllustration} from '../ilustrations/message-sent'
+
+import Message from "./Message";
 
 const ContactSchema = Yup.object().shape({
     email: Yup.string().email('Invalid email address').required('Required'),
     message: Yup.string(),
-})
-
-
-const MessageSentInfoWrapper = styled.div({
-
 })
 
 function MessageSentInfo() {
@@ -149,7 +144,7 @@ function useFetch({url, body}) {
 export default function ContactForm({style, header = 'Send message'}) {
     const [values, setValues] = React.useState()
     const {pending, response, error} = useFetch({
-        url: `${process.env.NETLIFY_FUNCTIONS_URL}/contact`,
+        url: `${process.env.REACT_APP_NETLIFY_FUNCTIONS_URL}/contact`,
         body: values,
     })
 
@@ -203,7 +198,7 @@ export default function ContactForm({style, header = 'Send message'}) {
                                 id="email"
                                 aria-required="true"
                                 name="email"
-                                placeholder="beth@harmon.com"
+                                placeholder="Redrick@Schuhart.com"
                                 type="email"
                             />
                             <label htmlFor="message">
@@ -226,7 +221,7 @@ export default function ContactForm({style, header = 'Send message'}) {
                                 id="message"
                                 aria-required="false"
                                 name="message"
-                                placeholder="Do you play chess?"
+                                placeholder="What's your favorite SF book?"
                                 type="text"
                             />
                             <button data-element="submit" type="submit">

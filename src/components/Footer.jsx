@@ -1,17 +1,15 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from '@emotion/react'
 import React from 'react';
-import {css} from '@emotion/react'
-import theme from "../config/theme";
 import Link from "./Link";
-import {bpMaxSM} from "../lib/breakpoints";
-import ContactForm from "./ContactForm";
-import Container from "./Container";
-
-import particleOptions from "../config/particles.config.json"
-import Particles from "react-tsparticles";
+import theme from "../config/theme";
 import {fonts} from "../lib/typography";
+import { jsx, css } from '@emotion/react'
+import {bpMaxSM} from "../lib/breakpoints";
+import {GitHub, LinkedIn} from "./Socials";
+
+import Container from "./Container";
+import ContactForm from "./ContactForm";
 
 const Footer = ({contactForm = <ContactForm/>, maxWidth}) => {
     return (
@@ -29,7 +27,6 @@ const Footer = ({contactForm = <ContactForm/>, maxWidth}) => {
               }
             `}
         >
-            {/*<Particles className="particles" options={particleOptions}/>*/}
             <Container
                 id="contact"
                 maxWidth={maxWidth}
@@ -48,7 +45,6 @@ const Footer = ({contactForm = <ContactForm/>, maxWidth}) => {
                   }
                 `}
             >
-
 
                 {contactForm ? (
                     <div css={{marginTop: -40}}>
@@ -76,16 +72,15 @@ const Footer = ({contactForm = <ContactForm/>, maxWidth}) => {
                       }
 
                       h4 {
-                        font-family: ${fonts.light};
-                        font-size: 14px;
+                         font-family: ${fonts.light};
+                        font-size: 16px;
                         color: white;
                       }
                     `}
                 >
                     <div>
-                        {/*<GitHub />*/}
-                        {/*<FreeCodeCamp />*/}
-                        {/*<YouTube />*/}
+                        <GitHub />
+                        <LinkedIn/>
                     </div>
 
                     <Link to="/" aria-label="Return to homepage">

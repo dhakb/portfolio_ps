@@ -7,7 +7,8 @@ import {bpMaxMD, bpMaxSM} from '../lib/breakpoints'
 import {fonts} from '../lib/typography'
 import Container from "./Container";
 
-
+import heroPathLeft from "../icons/left-path.svg"
+import heroPathRight from "../icons/right-path.svg"
 import particlesOptions from '../config/particles.config.json'
 import Particles from 'react-tsparticles'
 
@@ -29,7 +30,8 @@ function Hero({
               background: linear-gradient(-213deg,
               ${theme.colors.background_light} 0%,
               ${theme.colors.background_dark} 100%);
-              
+              border-radius: 5px;
+
               position: relative;
               align-items: center;
               display: flex;
@@ -39,10 +41,10 @@ function Hero({
                 position: absolute;
                 inset: 0px;
                 z-index: -10;
-
               }
 
               .images {
+                //background-image: url(${heroPathRight}), url(${heroPathLeft});
                 background-position: center right, center left;
                 background-repeat: no-repeat;
                 background-size: contain;
@@ -122,45 +124,5 @@ function Hero({
         </section>
     )
 }
-
-
-// function Hero({
-//                   children,
-//                   headerColor, // pluk this out of the props so it's not applied to the section
-//                   ...props
-//               }) {
-//     return (
-//         <section
-//             css={css`
-//         * {
-//           color: ${theme.colors.white};
-//         }
-//         height: 100px;
-//         width: 100%;
-//         background: linear-gradient(
-//           -213deg,
-//           ${theme.colors.background_light} 0%,
-//           ${theme.colors.background_dark} 100%
-//         );
-//         z-index: 0;
-//         position: relative;
-//         align-items: center;
-//         display: flex;
-//         padding-top: 40px;
-//         .particles {
-//           position: absolute;
-//           inset: 0px;
-//         }
-//         ${bpMaxSM} {
-//           padding-top: 60px;
-//         }
-//       `}
-//             {...props}
-//         >
-//             <Particles className="particles" options={particlesOptions} />
-//         </section>
-//     )
-// }
-
 
 export default Hero
