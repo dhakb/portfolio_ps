@@ -39,7 +39,7 @@ const tiltOptions = {
 
 
 const projectContainerStyles = css`
-  background: #231c42EE;
+  background: rgba(35, 28, 66, 0.62);
   border-radius: 10px;
   padding: 40px 80px 60px 80px;
   margin-bottom: 40px;

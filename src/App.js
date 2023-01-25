@@ -4,7 +4,8 @@ import {css, jsx} from '@emotion/react'
 import styled from '@emotion/styled'
 import Layout from "./components/Layout"
 import Container from './components/Container'
-import {bpMaxSM, bpMaxXS, bpMaxMD} from './lib/breakpoints'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import {bpMaxSM, bpMaxXS} from './lib/breakpoints'
 import theme from "./config/theme";
 import Markdown from "react-markdown"
 import Projects from "./components/Projects";
@@ -27,6 +28,7 @@ const Description = styled.div`
 
   p {
     margin-bottom: 4px;
+    font-size: 18px;
 
     ${bpMaxXS} {
       text-align: justify;
@@ -34,17 +36,24 @@ const Description = styled.div`
   }
 `
 
+const codeString = `
+    if(like) {
+        getInTouch()
+    }
+`
+
+
 
 function App() {
     return (
         <Layout headerColor="#fff" hero={<Hero/>}>
             <Container id="about" css={css`
-              margin-top: -40px;
+              margin-top: -30px;
               position: relative;
               background: white;
               border-radius: 5px;
               padding: 40px 80px 60px 80px;
-              margin-bottom: 40px;
+              margin-bottom: 140px;
               box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
               z-index: 10;
 
@@ -65,28 +74,30 @@ function App() {
                       margin-bottom: 40px;
                     `}
                 >
-                    <PostTitle>Who am I?</PostTitle>
+                    <PostTitle></PostTitle>
+
                     <Description>
                         <Markdown>
-                            {`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet atque doloribus esse id, 
-                         iure labore maiores minus nesciunt perspiciatis quisquam recusandae saepe suscipit temporibus, 
-                         tenetur totam voluptate voluptates voluptatibus!`}
+                            {`Hiyo, I'm Giga, a self-taught programmer from the Land of Kartvelians living in the UK.
+                             I started my tech journey back in 2021 by logging **Hello World** to the console. 
+                             Before writing any computer code I used to read and write Legal Code for several years. 
+                             Now, my world revolves around *JavaScript* universe.
+                             `}
                         </Markdown>
+                        <br/>
+                        <Markdown>
+                            {`Below you can find some projects I've developed that showcase my skills and general background in developing software.                
+                            `}
+                        </Markdown>
+                        <br/>
+                        <SyntaxHighlighter language="javascript" >
+                            {codeString}
+                        </SyntaxHighlighter>
                     </Description>
                 </div>
 
-                <div>
-                    <PostTitle>What do I do?</PostTitle>
-                    <Description>
-                        <Markdown>
-                            {`Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet atque doloribus esse id, 
-                         iure labore maiores minus nesciunt perspiciatis quisquam recusandae saepe suscipit temporibus, 
-                         tenetur totam voluptate voluptates voluptatibus!`}
-                        </Markdown>
-                    </Description>
-                </div>
             </Container>
-                <Projects/>
+            <Projects/>
         </Layout>);
 }
 
