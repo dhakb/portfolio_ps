@@ -37,6 +37,7 @@ function HeaderLink({headerColor, ...props}) {
 const NavLink = styled(HeaderLink)({
     padding: '8px 10px',
     borderRadius: '3px',
+    fontFamily: "Raleway, sans-serif",
     background: 'transparent',
     '& + &': {marginLeft: 10},
     [bpMaxSM]: {
@@ -99,8 +100,8 @@ function Header({
                         aria-label="go to homepage"
                         headerColor={headerColor}
                         css={{
+                            border: "1ps solid black",
                             position: 'relative',
-                            fontFamily: `${fonts.regular}`,
                             display: 'flex',
                             alignItems: 'center',
                             img: {

@@ -48,6 +48,7 @@ function App() {
     return (
         <Layout headerColor="#fff" hero={<Hero/>}>
             <Container id="about" css={css`
+              font-family: "Raleway", sans-serif;
               margin-top: -30px;
               position: relative;
               background: white;
@@ -63,6 +64,7 @@ function App() {
               }
 
               h2 {
+                font-family: "Raleway", sans-serif;
                 text-align: center;
               }
             `}>
@@ -78,7 +80,7 @@ function App() {
 
                     <Description>
                         <Markdown>
-                            {`Hiyo, I'm Giga, a self-taught programmer from the Land of Kartvelians living in the UK.
+                            {`Hi, I'm Giga, a self-taught programmer from the Land of Kartvelians living in the UK.
                              I started my tech journey back in 2021 by logging **Hello World** to the console. 
                              Before writing any computer code I used to read and write Legal Code for several years. 
                              Now, my world revolves around *JavaScript* universe.

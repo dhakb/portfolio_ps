@@ -21,7 +21,7 @@ const Button = styled.a({
     border: "2px solid white",
     borderRadius: '5px',
     fontSize: '16px',
-    fontFamily: fonts.semibold,
+    fontFamily: "Raleway, sans-serif",
     boxShadow: "inset 0 0 0 0 white",
     webkitTransition: "ease-out 0.4s",
     mozTransition: "ease-out 0.4s",
@@ -50,7 +50,6 @@ function Hero({
               // ${theme.colors.background_light} 0%,
               // ${theme.colors.background_dark} 100%);
               border-radius: 5px;
-
               position: relative;
               align-items: center;
               display: flex;
@@ -97,6 +96,7 @@ function Hero({
             >
                 <div
                     css={css`
+                      //font-family: "Raleway", sans-serif;
                       margin-top: -40px;
                       display: flex;
                       flex-direction: column;
@@ -112,7 +112,7 @@ function Hero({
                           letter-spacing: 1px;
                           margin: 0;
                           font-size: 60px;
-                          font-family: ${fonts.thin};
+                          font-family: "Raleway", sans-serif;
                           height: 100%;
                           display: flex;
                           padding-bottom: 0;
@@ -127,7 +127,7 @@ function Hero({
                     <p
                         css={css`
                           color: hsla(255, 100%, 100%, 0.9);
-                          font-family: ${fonts.regular};
+                          font-family: "Raleway", sans-serif;
                           font-size: 25px;
                           margin-bottom: 0;
 

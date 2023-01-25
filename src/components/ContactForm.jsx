@@ -37,6 +37,7 @@ function MessageSentInfo() {
 }
 
 const ContactFormWrapper = styled.div({
+    fontFamily: "Raleway, sans-serif",
     color: 'white',
     maxWidth: '350px',
     padding: '40px',
@@ -158,6 +159,7 @@ export default function ContactForm({style, header = 'Send message'}) {
             {!successful && (
                 <h3
                     css={css`
+                      font-family: "Raleway", sans-serif;
                       margin-bottom: ${rhythm(1)};
                       margin-top: 0;
                       color: white;

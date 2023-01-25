@@ -15,6 +15,7 @@ const Footer = ({contactForm = <ContactForm/>, maxWidth}) => {
     return (
         <footer
             css={css`
+              //font-family: "Raleway", sans-serif;
               position: relative;
               background: ${theme.colors.purple_dark};
               color: white;
@@ -72,7 +73,7 @@ const Footer = ({contactForm = <ContactForm/>, maxWidth}) => {
                       }
 
                       h4 {
-                         font-family: ${fonts.light};
+                        font-family: "Raleway", sans-serif;
                         font-size: 16px;
                         color: white;
                       }
